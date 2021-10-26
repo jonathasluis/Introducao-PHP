@@ -34,30 +34,14 @@
                 switch ($tipo) {
                     case 'insert':
                         echo $user->insert($_POST['nome']);
-
-                        echo '<h3>Usuarios:</h3>';
-                        foreach ($user->list() as $value) {
-                            echo 'Id: ' . $value['id_usuario'] . '<br>nome: ' . $value['nome_user'] . '<hr>';
-                        }
-
                         break;
 
                     case 'update':
                         echo $user->update($_POST['nome'],$_POST['id']);
-
-                        echo '<h3>Usuarios:</h3>';
-                        foreach ($user->list() as $value) {
-                            echo 'Id: ' . $value['id_usuario'] . '<br>nome: ' . $value['nome_user'] . '<hr>';
-                        }
                         break;
 
                     case 'delete':
                         echo $user->delete($_POST['id']);
-
-                        echo '<h3>Usuarios:</h3>';
-                        foreach ($user->list() as $value) {
-                            echo 'Id: ' . $value['id_usuario'] . '<br>nome: ' . $value['nome_user'] . '<hr>';
-                        }
                         break;
                     
                     default:
@@ -66,6 +50,11 @@
                             echo 'Id: ' . $value['id_usuario'] . '<br>nome: ' . $value['nome_user'] . '<hr>';
                         }
                         break;
+                }
+
+                echo '<h3>Usuarios:</h3>';
+                foreach ($user->list() as $value) {
+                    echo 'Id: ' . $value['id_usuario'] . '<br>nome: ' . $value['nome_user'] . '<hr>';
                 }
             ?>
         </form>
