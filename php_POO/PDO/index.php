@@ -27,35 +27,35 @@
                 $user = new Usuario();
                 $tipo = 'select';
 
-                if(isset($_POST['tipo'])){
-                    $tipo = $_POST['tipo'];
-                }
+            if (isset($_POST['tipo'])) {
+                $tipo = $_POST['tipo'];
+            }
 
-                switch ($tipo) {
-                    case 'insert':
-                        echo $user->insert($_POST['nome']);
-                        break;
+            switch ($tipo) {
+                case 'insert':
+                    echo $user->insert($_POST['nome']);
+                    break;
 
-                    case 'update':
-                        echo $user->update($_POST['nome'],$_POST['id']);
-                        break;
+                case 'update':
+                    echo $user->update($_POST['nome'], $_POST['id']);
+                    break;
 
-                    case 'delete':
-                        echo $user->delete($_POST['id']);
-                        break;
-                    
-                    default:
-                        echo '<h3>Usuarios:</h3>';
-                        foreach ($user->list() as $value) {
-                            echo 'Id: ' . $value['id_usuario'] . '<br>nome: ' . $value['nome_user'] . '<hr>';
-                        }
-                        break;
-                }
+                case 'delete':
+                    echo $user->delete($_POST['id']);
+                    break;
+
+                default:
+                    echo '<h3>Usuarios:</h3>';
+                    foreach ($user->list() as $value) {
+                        echo 'Id: ' . $value['id_usuario'] . '<br>nome: ' . $value['nome_user'] . '<hr>';
+                    }
+                    break;
+            }
 
                 echo '<h3>Usuarios:</h3>';
-                foreach ($user->list() as $value) {
-                    echo 'Id: ' . $value['id_usuario'] . '<br>nome: ' . $value['nome_user'] . '<hr>';
-                }
+            foreach ($user->list() as $value) {
+                echo 'Id: ' . $value['id_usuario'] . '<br>nome: ' . $value['nome_user'] . '<hr>';
+            }
             ?>
         </form>
     </body>

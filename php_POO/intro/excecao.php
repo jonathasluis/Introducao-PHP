@@ -1,7 +1,8 @@
 <?php
 
-function validaUsuario(array $usuario){
-    if(empty($usuario['codigo']) || empty($usuario['nome']) || empty($usuario['idade'])){
+function validaUsuario(array $usuario)
+{
+    if (empty($usuario['codigo']) || empty($usuario['nome']) || empty($usuario['idade'])) {
         throw new Exception('campos não foram preenchidos');
     }
 
@@ -23,5 +24,3 @@ try {
 }
 
 echo 'opa';
-
-?>

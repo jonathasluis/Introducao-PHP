@@ -1,4 +1,5 @@
 <?php
+
 session_start(); // inicio da sessão
 
 // IMPORTS
@@ -10,9 +11,7 @@ include "servicos/servicoCategoriaCompetidor.php";
 $nome = $_POST['nome'];
 $idade = $_POST['idade'];
 
-defineCategoria($nome,$idade);
+defineCategoria($nome, $idade);
 
-// A execução é feita em index.php 
-header("location: index.php")
-
-?>
+// A execução é feita em index.php
+header("location: index.php");
