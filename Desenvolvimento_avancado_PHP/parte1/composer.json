@@ -1,0 +1,5 @@
+{
+    "require": {
+        "wead/digital-cep": "^1.0"
+    }
+}
